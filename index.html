@@ -1,0 +1,19 @@
+<html>
+<body>
+	<div id='tags'></div>
+	<script>
+		var tags = ['#adopt', '#adorable', '#animal', '#animallovers', '#animals', '#aww', '#bestcats', '#bestcats_oftheworld', '#bestmeow', '#blackcat', '#cat', '#cat_features', '#cat_of_instagram', '#catdog', '#cateye', '#cateyes', '#catinstagram', '#catlady', '#catlife', '#catlove', '#catlover', '#catlovers', '#catloversclub', '#catmemes', '#catmom', '#catofinstagram', '#catofteday', '#catoftheday', '#catperson', '#catphoto', '#catphotos', '#cats', '#cats_of_instagram', '#catsagram', '#catsfollowers', '#catsgram', '#catslover', '#catsofig', '#catsofinsta', '#catsofinstagram', '#catsofreddit', '#catsoftheworld', '#catsofworld', '#catsonly', '#catstagram', '#cattvideo', '#catworld', '#coolcats', '#crazycatlady', '#cursedcat', '#cursedcatimages', '#cursedcats', '#cursedkitties', '#cursedpets', '#cute', '#cutecat', '#cutecatcrew', '#cutecats', '#cutest', '#epiccats', '#excellent_cats', '#funny', '#funnycat', '#furry', '#gato', '#gatos', '#igcats', '#ilovecat', '#ilovemycat', '#insta', '#instaanimal', '#instacat', '#instacat_meows', '#instacats', '#instagood', '#instagram', '#instagramcats', '#instakitty', '#katt', '#kitten', '#kittens', '#kittensofinstagram', '#kitties', '#kitty', '#kittycat', '#kittylove', '#kittymemes', '#kucing', '#lovecats', '#lovekittens', '#mascota', '#meow', '#meowbox', '#munchkin', '#mycat', '#nature', '#paw', '#paws', '#pet', '#petmemes', '#pets', '#petsagram', '#petscorner', '#petstagram', '#photooftheday', '#picneko', '#purr', '#thedailykitten', '#topcatphoto', '#weeklyfluff', '#weirdcats', '#whitecat', '#zoo', '#кот', '#котенок', '#кошка', '#ねこ', '#ねこ部', '#ネコ', '#猫', '#고양이', '#냥스타그램'];
+		function getRandomSubarray(arr, size) {
+		    var shuffled = arr.slice(0), i = arr.length, temp, index;
+		    while (i--) {
+		        index = Math.floor((i + 1) * Math.random());
+		        temp = shuffled[index];
+		        shuffled[index] = shuffled[i];
+		        shuffled[i] = temp;
+		    }
+		    return shuffled.slice(0, size);
+		}
+		document.getElementById('tags').innerHTML = getRandomSubarray(tags, 15).join(' ');
+	</script>
+</body>
+</html>
