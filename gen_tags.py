@@ -134,7 +134,7 @@ def gen(limit=15):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        limit = sys.argv[1]
+        limit = int(sys.argv[1])
     else:
         limit = 15
     print(' '.join(gen(limit)))
